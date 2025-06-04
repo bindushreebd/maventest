@@ -11,17 +11,17 @@ pipeline{
 	}
 	stage('Build'){
 	steps{
-		sh'mvn clean package'
+		sh 'mvn clean package'
 		}
 	}
 	stage('Test'){
 	steps{
-		sh'mvn test'
+		sh 'mvn test'
 		}
 	}
 	stage('Run Application'){
 	steps{
-		sh'java -jar target/maventest-1.0-SNAPSHOT.jar'
+		sh 'java -jar target/maventest-1.0-SNAPSHOT.jar'
 		}
 	}
 	}
